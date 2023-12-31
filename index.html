@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/mobilefirst.css" media="all">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Projeto formulário</h1>
+        <h2>Obrigado por acessar!</h2>
+    </header>
+    <body>
+        <main>
+            <section>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        <div class="container">
+                            <label for="inome">Nome</label>
+                            <input type="text" name="name" id="inome" autocomplete="name" required minlength="4" maxlength="20" placeholder="Digite seu nome" class="block">
+                        </div>
+                        <div class="container">
+                            <label for="iemail">Email</label>
+                            <input type="email" name="email" id="iemail" minlength="4" maxlength="20" required autocomplete="email" placeholder="Digite seu email" class="block">
+                        </div>
+                        <div class="container">
+                            <p>Qual é o seu gênero?</p>
+                            <input type="radio" name="gender" id="imale" class="inline">
+                            <label class="inline" for="imale">Masculino</label>
+                            <br>
+                            <input type="radio" name="gender" id="ifemale" class="inline">
+                            <label for="ifemale" class="inline">Feminino</label>
+                        </div>
+                        <div class="container">
+                            <label for="iage">Qual é a sua idade?</label>
+                            <input type="number" name="age" id="iage" min="10" max="100" required class="block" placeholder="Digite sua idade">
+                        </div>
+                        <div class="container">
+                           <label for="icountry">Selecione seu país</label>
+                            <select name="country" id="icountry" >
+                                <option value="bra">Brasil</option>
+                                <option value="fra">França</option>
+                                <option value="usa">Estados Unidos</option>
+                                <option value="spa">Espanha</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <hr>
+                    <fieldset>
+                        <legend>Habilidades</legend>
+                        <div class="container">
+                            <p>Quais indiomas você fala?</p>
+                            <input type="checkbox" name="port" id="iport" class="inline" checked>
+                            <label for="iport" class="inline">Português</label>
+                            <br>
+                            <input type="checkbox" name="eng" id="ieng" class="inline">
+                            <label for="ieng" class="inline">Inglês</label>
+                            <br>
+                            <input type="checkbox" name="esp" id="iesp" class="inline">
+                            <label for="iesp" class="inline">Espanhol</label>
+                            <br>
+                            <input type="checkbox" name="fra" id="ifra" class="inline">
+                            <label for="ifra" class="inline">Francês</label>
+                            <br>
+                            <input type="checkbox" name="other" id="iother" class="inline">
+                            <label for="iother" class="inline">Outros</label>
+                        </div>
+            
+                        <div class="container">
+                            <label for="iprof">Qual é o seu nível de proficiência?</label>
+                            <input type="text" name="prof" id="iprof" list="list01" autocomplete="off" required class="block" placeholder="Digite sua proficiência">
+                            <datalist id="list01">
+                                <option value="01">Iniciante</option>
+                                <option value="02">Intermediário</option>
+                                <option value="03">Avançado</option>
+                            </datalist>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <hr>
+                    <fieldset>
+                        <legend>Feedback</legend>
+                        <div class="container">
+                            <p>O quanto você gostou desse formulário?</p>
+                            <input type="range" name="avaliacao" id="iavaliacao" min="0" max="10">
+                        </div>
+                        <div class="container">
+                            <label for="iopniao">Dê sua opnião!(opcional)</label>
+                            <textarea name="opniao" id="iopniao" cols="30" rows="10" placeholder="Conte o que você achou do formulário!"></textarea>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Enviar" class="botao">
+                </form>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/monteiroojp">@monteiroojp</a></p>
+    </footer>
+</body>
+</html>
